@@ -2,9 +2,9 @@ const express = require("express");
 const router = express.Router();
 
 //Controllers import
-const { helloWorld } = require("../controllers/helloWorld");
+const { sendMail } = require("../controllers/mailController");
 
 //Mail routes
-router.route("/mail/helloWorld").get(helloWorld);
+router.route("/mail/sendMail").post(sendMail);
 
 module.exports = router;
