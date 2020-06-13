@@ -1,0 +1,19 @@
+{
+  "name": "flame-mail-api",
+  "version": "1.0.0",
+  "description": "Api that sends mail from the Flame website to a personal email",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlameTeam/FlameMailApi.git"
+  },
+  "author": "DixonOrtiz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FlameTeam/FlameMailApi/issues"
+  },
+  "homepage": "https://github.com/FlameTeam/FlameMailApi#readme"
+}
