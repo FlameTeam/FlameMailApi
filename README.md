@@ -7,11 +7,11 @@ Api that sends mail from the Flame website to a personal email.
 ## Getting Started
 
 - Node v10.19.0 or higher is recommended.
-- A .env file with the environment variables is required, check [api/config/env.js](https://github.com/FlameTeam/FlameBlogApi/blob/master/api/config/env.js).<br>
+- A .env file with the environment variables is required, check [src/config/env.js](https://github.com/FlameTeam/FlameMailApi/blob/master/src/config/env.js).<br>
 
 ### Clone this Repository
 
-`git clone https://github.com/FlameTeam/FlameBlogApi`
+`git clone https://github.com/FlameTeam/FlameMailApi/`
 
 ### Install Dependencies
 
