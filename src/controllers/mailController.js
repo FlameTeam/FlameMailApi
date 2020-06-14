@@ -1,4 +1,9 @@
-const { MAIL_SERVICE, MAIL_USER, MAIL_PASSWORD } = require("../config/env");
+const {
+  MAIL_SERVICE,
+  MAIL_USER,
+  MAIL_PASSWORD,
+  MAIL_RECEIVER,
+} = require("../config/env");
 const nodemailer = require("nodemailer");
 
 /**
@@ -33,7 +38,7 @@ exports.sendMail = (request, response) => {
 
   const mailOptions = {
     from: MAIL_USER,
-    to: "dixon.ortizc@gmail.com",
+    to: MAIL_RECEIVER,
     subject: `Flame Web Page Message from ${name}!`,
     text: `
            name: ${name}

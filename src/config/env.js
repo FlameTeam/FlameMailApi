@@ -32,9 +32,18 @@ if (MAIL_PASSWORD === undefined) {
   process.exit(1);
 }
 
+const MAIL_RECEIVER = process.env.MAIL_RECEIVER;
+if (MAIL_RECEIVER === undefined) {
+  console.log(
+    "[FlameMailApi][Error] No MAIL_RECEIVER environment variable in .env file"
+  );
+  process.exit(1);
+}
+
 module.exports = {
   PORT,
   MAIL_SERVICE,
   MAIL_USER,
   MAIL_PASSWORD,
+  MAIL_RECEIVER,
 };
