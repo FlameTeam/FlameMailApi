@@ -8,26 +8,10 @@ if (PORT === undefined) {
   process.exit(1);
 }
 
-const MAIL_SERVICE = process.env.MAIL_SERVICE;
-if (MAIL_SERVICE === undefined) {
+const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
+if (SENDGRID_API_KEY === undefined) {
   console.log(
-    "[FlameMailApi][Error] No MAIL_SERVICE environment variable in .env file"
-  );
-  process.exit(1);
-}
-
-const MAIL_USER = process.env.MAIL_USER;
-if (MAIL_USER === undefined) {
-  console.log(
-    "[FlameMailApi][Error] No MAIL_USER environment variable in .env file"
-  );
-  process.exit(1);
-}
-
-const MAIL_PASSWORD = process.env.MAIL_PASSWORD;
-if (MAIL_PASSWORD === undefined) {
-  console.log(
-    "[FlameMailApi][Error] No MAIL_PASSWORD environment variable in .env file"
+    "[FlameMailApi][Error] No SENDGRID_API_KEY environment variable in .env file"
   );
   process.exit(1);
 }
@@ -40,10 +24,17 @@ if (MAIL_RECEIVER === undefined) {
   process.exit(1);
 }
 
+const MAIL_SENDER = process.env.MAIL_SENDER;
+if (MAIL_SENDER === undefined) {
+  console.log(
+    "[FlameMailApi][Error] No MAIL_SENDER environment variable in .env file"
+  );
+  process.exit(1);
+}
+
 module.exports = {
   PORT,
-  MAIL_SERVICE,
-  MAIL_USER,
-  MAIL_PASSWORD,
+  SENDGRID_API_KEY,
   MAIL_RECEIVER,
+  MAIL_SENDER,
 };
